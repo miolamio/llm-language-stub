@@ -1,0 +1,10 @@
+# Private research, third-party clones, handoffs and QA logs (contain internal hosts)
+.dev/
+**/.dev/
+
+# Laid by Claude Code when the mod loads; machine-specific
+langmode/.claude-plugin/types/
+
+*.log
+.DS_Store
+node_modules/

@@ -1,0 +1,28 @@
+{
+  "name": "lang-bridge",
+  "version": "0.3.0",
+  "description": "LangMode: type in RU/UK/ES/AR, the model reads English, replies are drawn translated back (TranslateGemma service).",
+  "userConfig": {
+    "lang": {
+      "type": "string",
+      "title": "Display language",
+      "description": "auto: replies follow the language of the last prompt. Or a fixed code: ru, uk, es, ar, en.",
+      "default": "auto"
+    },
+    "url": {
+      "type": "string",
+      "title": "Translation service",
+      "description": "OpenAI-compatible chat/completions endpoint serving translategemma-12b. Empty turns the mod off.",
+      "default": ""
+    },
+    "timeoutSec": {
+      "type": "number",
+      "title": "Timeout per chunk, seconds",
+      "description": "A chunk not translated in time is shown (or sent) in the original.",
+      "default": 30
+    }
+  },
+  "author": { "name": "anthony" },
+  "license": "MIT",
+  "types": "./types/index.d.ts"
+}

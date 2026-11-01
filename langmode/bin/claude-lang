@@ -1,0 +1,8 @@
+#!/bin/sh
+# Claude Code with the LangMode mod (lang-bridge) loaded from this checkout.
+# Extra arguments go to claude as is. LANGMODE_DEBUG=1 writes a debug log.
+DIR="$(cd "$(dirname "$0")/.." && pwd)"
+if [ -n "$LANGMODE_DEBUG" ]; then
+  set -- --debug-file "${LANGMODE_LOG:-/tmp/langmode-debug.log}" "$@"
+fi
+exec claude --plugin-dir "$DIR" "$@"
